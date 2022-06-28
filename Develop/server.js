@@ -19,18 +19,18 @@ app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: true }).then(() => {
-  Promise.all([
-    seedCategories(),
-    seedProducts(),
-    seedTags(),
-    seedProductTags()
-  ]).then(() => {
-    app.listen(PORT, () => {
-      console.log(`App listening on port ${PORT}!`);
-    });  
-  }).catch(function (error) {
-    console.error(error);
-  });
-}).catch(function (error) {
-  console.error(error);
+      Promise.all([
+        seedCategories(),
+        seedProducts(),
+        seedTags(),
+        seedProductTags()
+      ]).then(() => {
+        app.listen(PORT, () => {
+          console.log(`App listening on port ${PORT}!`);
+        });  
+      }).catch(function (error) {
+        console.error(error);
+      });
+    }).catch(function (error) {
+      console.error(error);
 });

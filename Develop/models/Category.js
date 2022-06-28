@@ -22,6 +22,7 @@ Category.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
+    schema: 'ecommerce_db'
   }
 );
 

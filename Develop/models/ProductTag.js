@@ -24,6 +24,7 @@ ProductTag.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'product_tag',
+    schema: 'ecommerce_db'
   }
 );
 
